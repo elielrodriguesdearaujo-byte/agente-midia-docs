@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>Autorizando… — Agente Mídia</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6; max-width: 32rem; margin: 0 auto;
+    padding: 5rem 1.5rem; color: #16202a; background: #fff; text-align: center;
+  }
+  @media (prefers-color-scheme: dark) { body { color: #e5ebf1; background: #0f1418; } }
+  h1 { font-size: 1.35rem; margin-bottom: .6rem; }
+  p { color: #66757f; }
+  a { color: #1a6a86; }
+  @media (prefers-color-scheme: dark) { a { color: #5eb4d4; } }
+  code { font-size: .85em; background: rgba(127,127,127,.16); padding: .15em .4em; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<h1>Autorizando…</h1>
+<p id="msg">Devolvendo o controle ao seu computador. Pode fechar esta aba em seguida.</p>
+
+<script>
+  // Ponte de redirecionamento.
+  //
+  // O TikTok exige que a redirect URI comece com https:// — não aceita
+  // http://127.0.0.1. Esta página recebe o retorno em HTTPS e reencaminha
+  // para o servidor local que o agente sobe durante o consentimento,
+  // preservando a query string (onde vêm `code` e `state`).
+  //
+  // Nada é armazenado, registrado ou enviado a terceiros. O `code` é de uso
+  // único e o TikTok exige PKCE: sem o verifier, que nunca sai da máquina do
+  // usuário, ele não serve para nada.
+  (function () {
+    var destino = "http://127.0.0.1:8765/callback" + window.location.search;
+
+    if (!window.location.search) {
+      document.getElementById("msg").textContent =
+        "Esta página só funciona como retorno de uma autorização. Nada a fazer aqui.";
+      return;
+    }
+    window.location.replace(destino);
+  })();
+</script>
+
+<noscript>
+  <p>
+    O JavaScript está desativado. Copie o endereço desta página e troque o
+    início por <code>http://127.0.0.1:8765/callback</code>, mantendo tudo a
+    partir do <code>?</code>.
+  </p>
+</noscript>
+
+</body>
+</html>

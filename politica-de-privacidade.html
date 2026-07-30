@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade — Agente Mídia | Eliel Rodrigues Consultoria</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65; max-width: 46rem; margin: 0 auto;
+    padding: 3rem 1.25rem 6rem; color: #16202a; background: #fff;
+  }
+  @media (prefers-color-scheme: dark) { body { color: #e5ebf1; background: #0f1418; } }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin-bottom: .4rem; }
+  h2 { font-size: 1.15rem; margin-top: 2.4rem; }
+  .meta { color: #66757f; font-size: .92rem; margin-bottom: 2.5rem; }
+  ul { padding-left: 1.2rem; }
+  li { margin-bottom: .4rem; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
+  th, td { text-align: left; padding: .55rem .6rem; border-bottom: 1px solid rgba(127,127,127,.3); vertical-align: top; }
+  th { font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; color: #66757f; }
+  code { background: rgba(127,127,127,.14); padding: .1em .35em; border-radius: 4px; font-size: .9em; }
+  .destaque { border-left: 3px solid #1a6a86; padding: .8rem 1rem; background: rgba(26,106,134,.07); border-radius: 0 6px 6px 0; margin: 1.4rem 0; }
+  footer { margin-top: 3.5rem; padding-top: 1.2rem; border-top: 1px solid rgba(127,127,127,.3); font-size: .9rem; color: #66757f; }
+</style>
+</head>
+<body>
+
+<h1>Política de Privacidade</h1>
+<p class="meta">
+  Aplicação: <strong>Agente Mídia</strong><br>
+  Controlador: Eliel Rodrigues Consultoria<br>
+  Última atualização: 29 de julho de 2026
+</p>
+
+<div class="destaque">
+  <strong>Resumo em uma frase:</strong> esta aplicação publica conteúdo nas contas de
+  redes sociais da própria Eliel Rodrigues Consultoria. Ela não coleta dados de
+  outras pessoas, não vende informação a ninguém, e tudo que guarda fica gravado
+  de forma criptografada no computador do titular.
+</div>
+
+<h2>1. Quem somos</h2>
+<p>
+  A Eliel Rodrigues Consultoria, sediada em Taubaté, São Paulo, é a responsável pelo
+  tratamento dos dados descritos nesta política. Contato:
+  <strong>elielrodriguesdearaujo@gmail.com</strong>.
+</p>
+
+<h2>2. Quais dados são tratados</h2>
+<table>
+  <thead>
+    <tr><th>Dado</th><th>Para que serve</th><th>Onde fica</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tokens de acesso e renovação (OAuth)</td>
+      <td>Autorizar a aplicação a publicar nas contas do titular</td>
+      <td>Arquivo criptografado no computador do titular</td>
+    </tr>
+    <tr>
+      <td>Identificadores públicos da conta (id da Página, id do perfil, nome de usuário)</td>
+      <td>Saber em qual conta publicar</td>
+      <td>Mesmo arquivo criptografado</td>
+    </tr>
+    <tr>
+      <td>Conteúdo dos posts (texto e endereços das mídias)</td>
+      <td>Montar e enviar a publicação</td>
+      <td>Banco local, no computador do titular</td>
+    </tr>
+    <tr>
+      <td>Métricas públicas dos próprios posts</td>
+      <td>Acompanhar desempenho do conteúdo</td>
+      <td>Banco local, no computador do titular</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>3. Quais dados NÃO são tratados</h2>
+<ul>
+  <li>Mensagens privadas, conversas ou caixas de entrada;</li>
+  <li>Dados de seguidores, curtidas individuais ou perfis de terceiros;</li>
+  <li>Lista de contatos, agenda telefônica ou e-mails de terceiros;</li>
+  <li>Dados de pagamento, cartões ou informações bancárias;</li>
+  <li>Localização do dispositivo.</li>
+</ul>
+
+<h2>4. Onde os dados ficam guardados</h2>
+<p>
+  <strong>Não existe servidor.</strong> A aplicação roda no computador do próprio
+  titular. Os tokens de acesso ficam num arquivo local cifrado com criptografia
+  simétrica (Fernet/AES-128 em modo CBC com autenticação HMAC), cuja chave é mantida
+  fora do código e fora do repositório.
+</p>
+<p>
+  Nenhum dado é enviado para servidores da Eliel Rodrigues Consultoria, porque não
+  existem. As únicas conexões de rede que a aplicação faz são para as APIs oficiais
+  da Meta, do LinkedIn e do TikTok.
+</p>
+
+<h2>5. Compartilhamento com terceiros</h2>
+<p>
+  <strong>Nenhum dado é vendido, alugado ou compartilhado.</strong> Os dados trafegam
+  exclusivamente entre o computador do titular e as APIs oficiais das redes sociais
+  autorizadas, com a finalidade única de publicar e medir o conteúdo do titular.
+</p>
+
+<h2>6. Por quanto tempo são mantidos</h2>
+<ul>
+  <li><strong>Tokens:</strong> enquanto a autorização estiver ativa. Revogada a autorização, tornam-se inúteis e podem ser apagados.</li>
+  <li><strong>Histórico de publicações:</strong> mantido enquanto for útil para evitar publicações duplicadas.</li>
+  <li><strong>Métricas:</strong> mantidas para acompanhamento histórico do próprio conteúdo.</li>
+</ul>
+<p>
+  O titular pode apagar tudo a qualquer momento removendo os arquivos locais da
+  aplicação.
+</p>
+
+<h2>7. Direitos do titular (LGPD)</h2>
+<p>
+  Nos termos da Lei nº 13.709/2018 (LGPD), o titular pode a qualquer momento:
+</p>
+<ul>
+  <li>Confirmar a existência de tratamento e acessar os dados;</li>
+  <li>Corrigir dados incompletos ou desatualizados;</li>
+  <li>Solicitar anonimização, bloqueio ou eliminação;</li>
+  <li>Revogar o consentimento;</li>
+  <li>Obter informações sobre compartilhamento — que, nesta aplicação, não ocorre.</li>
+</ul>
+<p>
+  Como a aplicação trata apenas dados das contas do próprio titular e armazena tudo
+  localmente, o exercício desses direitos é imediato: basta revogar a autorização na
+  rede social e apagar os arquivos locais.
+</p>
+
+<h2>8. Como revogar o acesso</h2>
+<ul>
+  <li><strong>Facebook e Instagram:</strong> Configurações → Aplicativos e sites</li>
+  <li><strong>LinkedIn:</strong> Configurações → Privacidade de dados → Serviços de terceiros permitidos</li>
+  <li><strong>TikTok:</strong> Configurações → Segurança → Gerenciar aplicativos conectados</li>
+</ul>
+
+<h2>9. Segurança</h2>
+<ul>
+  <li>Credenciais e tokens nunca aparecem no código-fonte nem em registros de log;</li>
+  <li>O cofre de tokens é cifrado em disco;</li>
+  <li>Toda comunicação com as APIs ocorre por HTTPS;</li>
+  <li>Nenhuma senha de rede social é solicitada, vista ou armazenada — a autorização usa exclusivamente o fluxo OAuth 2.0 das plataformas.</li>
+</ul>
+
+<h2>10. Menores de idade</h2>
+<p>
+  A aplicação não se destina a menores de 18 anos e não coleta intencionalmente
+  dados de crianças ou adolescentes.
+</p>
+
+<h2>11. Alterações desta política</h2>
+<p>
+  Esta política pode ser atualizada. A data da última atualização consta no topo
+  desta página.
+</p>
+
+<h2>12. Contato</h2>
+<p>
+  Para exercer direitos ou esclarecer dúvidas sobre privacidade, escreva para
+  <strong>elielrodriguesdearaujo@gmail.com</strong>.
+</p>
+
+<footer>
+  Eliel Rodrigues Consultoria — Taubaté, São Paulo, Brasil<br>
+  CRECI-SP 329321
+</footer>
+
+</body>
+</html>
